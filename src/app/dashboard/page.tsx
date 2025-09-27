@@ -12,6 +12,8 @@ const Dashboard = () => {
   const [role, setRole] = useState<Role>("");
   const { push } = useRouter();
 
+  const onClickUpload = () => push(ROUTE_UPLOAD);
+
   useEffect(() => {
     const storedData = sessionStorage.getItem("parsedData");
     if (storedData) {
@@ -24,12 +26,14 @@ const Dashboard = () => {
 
   if (parsedData.length === 0) {
     return (
-      <section className="no-data-found">
-        <p>No uploaded data found. Please upload a file first.</p>
-        <button className="upload-button" onClick={() => push("/upload")}>
-          Upload File
-        </button>
-      </section>
+      <Container>
+        <section className="no-data-found">
+          <p>No uploaded data found. Please upload a file first.</p>
+          <button className="upload-button" onClick={onClickUpload}>
+            Upload File
+          </button>
+        </section>
+      </Container>
     );
   }
 

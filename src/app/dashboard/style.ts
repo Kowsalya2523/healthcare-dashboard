@@ -15,12 +15,14 @@ export const Container = styled.section`
   }
 
   .no-data-found {
-    display: "flex";
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 80vh;
     font-size: 18px;
+    text-align: center;
+    gap: 20px;
   }
 
   .header {
@@ -29,13 +31,13 @@ export const Container = styled.section`
     margin: 0 32px;
   }
 
-  .button-wrapper{
+  .button-wrapper {
     display: flex;
     gap: 12px;
   }
 
-  .logout{
-    background:red;
+  .logout {
+    background: red;
     color: #fff;
     border: none;
     padding: 8px 20px;
